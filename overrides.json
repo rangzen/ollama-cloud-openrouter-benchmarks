@@ -1,0 +1,3 @@
+{
+  "_comment": "Maps an Ollama family slug (e.g. 'gpt-oss') to an OpenRouter model_permaslug (e.g. 'openai/gpt-oss-120b'). Set the value to null to force 'no data' instead of a fuzzy match. Run the build once first, check its stderr output for low-confidence/no-match rows, then fill in corrections here and re-run."
+}
