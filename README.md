@@ -1,6 +1,6 @@
-# Ollama Cloud Models vs OpenRouter Benchmarks
+# Ollama Cloud Models with OpenRouter Benchmarks
 
-A static page comparing every model on Ollama's cloud tier against OpenRouter's benchmark scores (Artificial Analysis intelligence / coding / agentic indices), to help pick the right model for a given usage tier on Ollama Pro.
+A static page listing every model on Ollama's cloud tier, marked up with OpenRouter's benchmark scores (Artificial Analysis intelligence / coding / agentic indices), to help pick the right model for a given usage tier on Ollama Pro.
 
 ## Setup
 

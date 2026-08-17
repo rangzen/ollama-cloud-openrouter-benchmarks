@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build a static comparison page of Ollama cloud models vs OpenRouter benchmarks.
+Build a static page of Ollama cloud models marked up with OpenRouter benchmarks.
 
 Usage:
     cp .env.example .env   # then fill in OPENROUTER_API_KEY
@@ -327,7 +327,7 @@ HTML_TEMPLATE = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ollama Cloud Models vs OpenRouter Benchmarks</title>
+<title>Ollama Cloud Models with OpenRouter Benchmarks</title>
 <style>
 :root {
   --bg: #0b0d12; --panel: #12151c; --border: #232733; --text: #e7e9ee; --muted: #8a90a2;
@@ -365,7 +365,7 @@ a { color: var(--accent); }
 </head>
 <body>
 <header>
-  <h1>Ollama Cloud Models vs OpenRouter Benchmarks</h1>
+  <h1>Ollama Cloud Models with OpenRouter Benchmarks</h1>
   <p class="sub">
     Every model available under <a href="https://ollama.com/search?c=cloud" target="_blank">Ollama's cloud tier</a>,
     cross-referenced against <a href="https://openrouter.ai/docs/api-reference/benchmarks" target="_blank">OpenRouter's benchmark scores</a>
