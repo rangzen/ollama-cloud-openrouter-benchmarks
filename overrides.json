@@ -1,3 +1,8 @@
 {
-  "_comment": "Maps an Ollama family slug (e.g. 'gpt-oss') to an OpenRouter model_permaslug (e.g. 'openai/gpt-oss-120b'). Set the value to null to force 'no data' instead of a fuzzy match. Run the build once first, check its stderr output for low-confidence/no-match rows, then fill in corrections here and re-run."
+  "_comment": "Maps an Ollama family slug (e.g. 'gpt-oss') to an OpenRouter model_permaslug (e.g. 'openai/gpt-oss-120b'). Set the value to null to force 'no data' instead of a fuzzy match. Run the build once first, check its stderr output for low-confidence/no-match rows, then fill in corrections here and re-run.",
+  "gemma4": "google/gemma-4-31b-it-20260402",
+  "glm-5.1": "z-ai/glm-5.1-20260406",
+  "nemotron-3-super": "nvidia/nemotron-3-super-120b-a12b-20230311",
+  "nemotron-3-ultra": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
+  "qwen3.5": "qwen/qwen3.5-397b-a17b-20260216"
 }
