@@ -334,16 +334,17 @@ HTML_TEMPLATE = """<!doctype html>
   --accent: #6aa9ff; --good: #3ecf8e; --warn: #f5b942; --bad: #6b7180;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-header { padding: 28px 24px 8px; max-width: 1400px; margin: 0 auto; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; display: flex; flex-direction: column; }
+header { flex: none; padding: 28px 24px 8px; max-width: 100%; margin: 0 auto; }
 h1 { font-size: 20px; margin: 0 0 6px; }
 p.sub { color: var(--muted); margin: 0 0 18px; max-width: 760px; }
-main { max-width: 1400px; margin: 0 auto; padding: 0 24px 48px; }
-.controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; }
+main { flex: 1; min-height: 0; display: flex; flex-direction: column; max-width: 100%; margin: 0 auto; padding: 0 24px 24px; width: 100%; }
+.controls { flex: none; display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; }
 .controls input[type=text] { background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 7px 10px; border-radius: 6px; width: 220px; }
 .controls select { background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 7px 10px; border-radius: 6px; }
 .controls label { color: var(--muted); font-size: 12px; display: flex; gap: 6px; align-items: center; }
-.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
+.table-wrap { flex: 1; min-height: 0; overflow: auto; border: 1px solid var(--border); border-radius: 10px; }
 table { border-collapse: collapse; width: 100%; min-width: 1100px; }
 th, td { padding: 9px 12px; text-align: left; white-space: nowrap; border-bottom: 1px solid var(--border); }
 thead th { background: var(--panel); position: sticky; top: 0; cursor: pointer; user-select: none; color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; }
@@ -359,7 +360,7 @@ tbody tr:hover { background: #161a24; }
 .badge.extra.high, .badge.extra-high { background: rgba(235,90,90,.15); color: #eb5a5a; }
 .no-data { color: var(--bad); font-style: italic; }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
-footer { color: var(--muted); font-size: 12px; padding: 20px 24px; max-width: 1400px; margin: 0 auto; }
+footer { flex: none; color: var(--muted); font-size: 12px; padding: 12px 24px; max-width: 100%; margin: 0 auto; }
 a { color: var(--accent); }
 </style>
 </head>
