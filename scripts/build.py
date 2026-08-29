@@ -351,6 +351,9 @@ thead th { background: var(--panel); position: sticky; top: 0; cursor: pointer; 
 thead th:hover { color: var(--text); }
 thead th.sorted { color: var(--accent); }
 tbody tr:hover { background: #161a24; }
+.sticky-col { position: sticky; left: 0; z-index: 1; background: var(--bg); border-right: 1px solid var(--border); }
+thead th.sticky-col { background: var(--panel); z-index: 2; }
+tbody tr:hover .sticky-col { background: #161a24; }
 .model-name { color: var(--text); font-weight: 600; }
 .model-tag { color: var(--muted); font-size: 12px; }
 .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
@@ -395,7 +398,7 @@ a { color: var(--accent); }
       <thead>
         <tr>
           <th data-key="family_name">Model</th>
-          <th data-key="ollama_tag">Ollama tag</th>
+          <th class="sticky-col" data-key="ollama_tag">Ollama tag</th>
           <th data-key="usage_rank">Usage tier</th>
           <th data-key="context">Context</th>
           <th data-key="size">Size</th>
@@ -454,7 +457,7 @@ function render() {
   tbody.innerHTML = rows.map(r => `
     <tr>
       <td><div class="model-name">${r.family_name}</div><div class="model-tag">${r.description ? r.description.slice(0, 60) : ""}</div></td>
-      <td class="model-tag">${r.ollama_tag}</td>
+      <td class="model-tag sticky-col">${r.ollama_tag}</td>
       <td>${usageBadge(r.usage_level)}</td>
       <td>${r.context || ""}</td>
       <td>${r.size || ""}</td>
